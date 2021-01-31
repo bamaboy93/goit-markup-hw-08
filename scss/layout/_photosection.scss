@@ -1,0 +1,32 @@
+.photo {
+  display: flex;
+  justify-content: center;
+}
+.photo .item {
+  position: relative;
+  display: flex;
+}
+.photo .item.item:not(:last-child) {
+  margin-right: 30px;
+}
+.box .box-title {
+  color: getColor('white-bg-color');
+  margin: 0;
+
+  font-weight: 700;
+
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: center;
+}
+.photo .box {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 370px;
+  height: 70px;
+  bottom: 0;
+
+  background-color: rgba(47, 48, 58, 0.8);
+}

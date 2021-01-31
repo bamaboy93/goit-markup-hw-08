@@ -1,0 +1,47 @@
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+
+  &-item:not(:nth-child(4n)) {
+    margin-right: 30px;
+  }
+  &-item {
+    width: calc((1170px - 90px) / 4);
+  }
+  &-item::before {
+    display: block;
+    content: '';
+    height: 120px;
+    width: 270px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    margin-bottom: 30px;
+
+    background-color: getColor('crew-bg-color');
+  }
+}
+.icon-antenna::before {
+  background-image: url('../images/antenna.svg');
+}
+.icon-clock::before {
+  background-image: url('../images/clock.svg');
+}
+.icon-laptop::before {
+  background-image: url('../images/laptop.svg');
+}
+.icon-astronaut::before {
+  background-image: url('../images/astronaut.svg');
+}
+.advantages-item-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: getColor('title-text-color');
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.advantages p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
