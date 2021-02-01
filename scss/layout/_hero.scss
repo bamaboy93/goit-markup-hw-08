@@ -12,9 +12,11 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
+  @media screen and (max-width: 767px) {
+    object-fit: cover;
+  }
   &-section {
-    width: 696px;
+    // width: 696px;
     text-align: center;
   }
   &-title {

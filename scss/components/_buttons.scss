@@ -57,3 +57,24 @@
 
   cursor: pointer;
 }
+.menu-button {
+  display: inline-flex;
+  // margin-left: 284px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  @media screen and(min-width:1200px) {
+    display: none;
+  }
+
+  &.icon-close {
+    display: none;
+  }
+}
+.menu-button.is-open .icon-close {
+  display: block;
+}
+.menu-button.is-open .icon-menu {
+  display: none;
+}

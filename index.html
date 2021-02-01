@@ -18,6 +18,33 @@
                 <a href="./index.html" class="logo">
                     Web<span class="blacklogo">Studio</span> 
                 </a>
+                <button type="button" class="menu-button is-open" aria-expanded="false" data-menu-button>
+                    <svg width="24" height="16" aria-label="Переключатель мобильного меню">
+                        <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+                        <use class="icon-close" href="./images/sprite.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <div class="menu-container">
+                    <!-- <ul class="site-nav list">
+                        <li class="item current"><a href="./index.html" class="site-nav-link current">Студия</a></li>
+                        <li class="item"><a href="./portfolio.html" class="site-nav-link">Портфолио</a></li>
+                        <li class="item"><a href="/" class="site-nav-link">Контакты</a></li>
+                    </ul>
+                    <ul class="auth-nav list">
+                        <li class="item"><a class="auth-nav-link" href="mailto:info@devstudio.com">
+                            <svg class="link-icon">
+                                <use href="./images/sprite.svg#icon-letter"></use>
+                            </svg>
+                            info@devstudio.com</a></li>
+                        <li class="item"><a class="auth-nav-link" href="tel:+380961111111">
+                            <svg class="link-icon">
+                                <use href="./images/sprite.svg#icon-phone"></use>
+                            </svg>
+                            +38 096 111 11 11</a></li>
+                    </ul> -->
+
+
+                </div>
         
                 <ul class="site-nav list">
                     <li class="item current"><a href="./index.html" class="site-nav-link current">Студия</a></li>
@@ -77,8 +104,8 @@
     </section>
     <!--Чем мы занимаемся-->
     <section class="section">
-        <div class="container">
-            <h2 class="section-title">Чем мы занимаемся</h2>
+        <div class="photosection container">
+            <h2 class="photosection-title">Чем мы занимаемся</h2>
             <ul class="photo list">
                 <li class="item">
                     <img src="./images/img.jpg" alt="Человек занимается версткой" width="370">
@@ -440,25 +467,8 @@
                 });
         })  ();
     </script>
-    <script>
-        const refs = {
-            openModalBtn: document.querySelector("[data-open-modal]"),
-            closeModalBtn: document.querySelector("[data-close-modal]"),
-            backdrop: document.querySelector("[data-backdrop]"),
-        };
-
-        refs.openModalBtn.addEventListener("click", toggleModal);
-        refs.closeModalBtn.addEventListener("click", toggleModal);
-
-        refs.backdrop.addEventListener("click", logBackdropClick);
-
-        function toggleModal() {
-            refs.backdrop.classList.toggle("is-hidden");
-        }
-
-        function logBackdropClick(){
-            console.log
-        }
-    </script>
+    
+    <script src="./js/modal.js"></script>  
+    <script src="./js/menu.js"></script>
 </body>
 </html>

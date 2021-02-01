@@ -1,3 +1,17 @@
+.photosection {
+  @media screen and(max-width:1199px) {
+    display: none;
+  }
+}
+.photosection-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: getColor('title-text-color');
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+}
 .photo {
   display: flex;
   justify-content: center;

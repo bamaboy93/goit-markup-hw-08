@@ -26,17 +26,17 @@ footer {
 }
 
 .block {
-  display: flex;
-  align-items: baseline;
+  // display: flex;
+  // align-items: baseline;
 }
 .footer-contacts {
-  display: flex;
-  flex-direction: column;
-  margin-right: 70px;
+  // display: flex;
+  // flex-direction: column;
+  // margin-right: 70px;
 }
 .footer-social {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
 }
 .social-title,
 .sign-title {
@@ -49,9 +49,9 @@ footer {
   margin-bottom: 20px;
 }
 .footer-social-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 
   fill: getColor('white-bg-color');
   background-color: rgba(255, 255, 255, 0.1);
@@ -72,7 +72,7 @@ footer {
   margin-left: auto;
 }
 .signs {
-  display: flex;
+  // display: flex;
 }
 .footer-input {
   width: 358px;
