@@ -1,48 +1,26 @@
 .advantages {
-  &-item {
-    @media screen and (min-width: 768px) {
-      width: calc((100% - 4 * 15px) / 2);
-      margin: 15px;
-    }
-    @media screen and (min-width: 1200px) {
-      width: calc((100% - 8 * 15px) / 4);
-      margin: 15px;
-    }
+  display: flex;
+  flex-wrap: wrap;
+
+  &-item:not(:nth-child(4n)) {
+    margin-right: 30px;
   }
-  &-item:not(:last-child) {
-    margin-bottom: 30px;
+  &-item {
+    width: calc((1170px - 90px) / 4);
   }
   &-item::before {
-    display: inline-block;
+    display: block;
     content: '';
     height: 120px;
-
+    width: 270px;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 4px;
     margin-bottom: 30px;
 
     background-color: getColor('crew-bg-color');
-
-    width: 100%;
-
-    @media screen and (min-width: 768px) {
-      width: 354px;
-    }
-    @media screen and (min-width: 1200px) {
-      width: 270px;
-    }
-  }
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
-  }
-  @media screen and (min-width: 1200px) {
-    margin: -15px;
   }
 }
-
 .icon-antenna::before {
   background-image: url('../images/antenna.svg');
 }
@@ -62,8 +40,6 @@
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
-
-  text-align: center;
 }
 .advantages p {
   margin-top: 0;

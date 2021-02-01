@@ -1,0 +1,16 @@
+$colors: (
+  'primary-text-color': #757575,
+  'title-text-color': #212121,
+  'secondary-bg-color': #2f303a,
+  'white-bg-color': #ffffff,
+  'crew-bg-color': #f5f4fa,
+  'accent-color': #2196f3,
+  'adress-text-color': rgba(255, 255, 255, 0.6),
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+$primary-font-family: 'Roboto', sans-serif;
+$logo-font-family: 'Raleway', sans-serif;

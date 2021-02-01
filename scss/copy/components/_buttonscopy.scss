@@ -33,7 +33,6 @@
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  cursor: pointer;
 }
 
 .subscribe-button {
@@ -57,32 +56,4 @@
   border-style: none;
 
   cursor: pointer;
-  @media screen and(max-width:767px) {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-.menu-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 7px;
-  padding: 8px 12px;
-
-  border: none;
-  background-color: transparent;
-
-  @media screen and(min-width:1200px) {
-    display: none;
-  }
-
-  &.icon-menu {
-    display: none;
-  }
-}
-.menu-button.is-open .icon-close {
-  display: block;
-}
-.menu-button.is-open .icon-menu {
-  display: none;
 }

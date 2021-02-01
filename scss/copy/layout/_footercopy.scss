@@ -2,8 +2,6 @@ footer {
   background-color: getColor('secondary-bg-color');
   padding-top: 60px;
   padding-bottom: 60px;
-
-  text-align: center;
 }
 /* Address */
 .address {
@@ -26,28 +24,19 @@ footer {
 .auth .item:not(:last-child) {
   margin-bottom: 9px;
 }
-.auth {
-  margin-bottom: 60px;
-}
 
 .block {
-  @media screen and(min-width:1200px) {
-    display: flex;
-    align-items: baseline;
-  }
+  display: flex;
+  align-items: baseline;
 }
 .footer-contacts {
-  @media screen and(min-width:1200px) {
-    display: flex;
-    flex-direction: column;
-    margin-right: 70px;
-  }
+  display: flex;
+  flex-direction: column;
+  margin-right: 70px;
 }
 .footer-social {
-  @media screen and(min-width:1200px) {
-    display: flex;
-    flex-direction: column;
-  }
+  display: flex;
+  flex-direction: column;
 }
 .social-title,
 .sign-title {
@@ -76,8 +65,6 @@ footer {
   &:focus {
     background-color: getColor('accent-color');
   }
-
-  margin-bottom: 60px;
 }
 
 .footer-sign {
@@ -85,15 +72,12 @@ footer {
   margin-left: auto;
 }
 .signs {
-  @media screen and(min-width:1200px) {
-    display: flex;
-  }
+  display: flex;
 }
 .footer-input {
-  width: 450px;
+  width: 358px;
   height: 50px;
   padding-left: 16px;
-  margin-bottom: 20px;
   outline: transparent;
   color: getColor('white-bg-color');
   font-weight: 400;
