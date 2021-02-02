@@ -5,7 +5,7 @@ header {
 }
 
 .header {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,12 +20,11 @@ header {
 /* Site nav */
 
 .site-nav {
-  @media screen and(max-width:767px) {
-    display: none;
-  }
-  @media screen and(min-width:1200px) {
+  display: none;
+
+  @media screen and(min-width:768px) {
     display: flex;
-    margin-left: 93px;
+    margin-left: 88px;
   }
 }
 .site-nav-link {
@@ -70,22 +69,35 @@ header {
 
 /* Auth nav */
 .auth-nav {
-  margin-left: auto;
-  @media screen and(max-width:767px) {
-    display: none;
+  display: none;
+
+  @media screen and(min-width:768px) {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
   }
   @media screen and(min-width:1200px) {
     display: flex;
+    margin-left: auto;
   }
 }
 .auth-nav .item + .item {
-  margin-left: 50px;
+  @media screen and(min-width:1200px) {
+    margin-left: 50px;
+  }
 }
-
+.auth-nav .item {
+  @media screen and(min-width:768px) {
+    margin-bottom: 10px;
+  }
+}
+.auth-nav .item:last-child {
+  @media screen and(min-width:768px) {
+    margin-bottom: 0px;
+  }
+}
 .auth-nav-link {
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: getColor('primary-text-color');
@@ -98,9 +110,6 @@ header {
   &:hover,
   &:focus {
     color: getColor('accent-color');
-  }
-  @media screen and(min-width:1200px) {
-    display: flex;
   }
 }
 

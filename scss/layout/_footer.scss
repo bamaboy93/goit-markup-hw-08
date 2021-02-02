@@ -29,7 +29,11 @@ footer {
 .auth {
   margin-bottom: 60px;
 }
-
+.block-tablet {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+}
 .block {
   @media screen and(min-width:1200px) {
     display: flex;
@@ -37,17 +41,15 @@ footer {
   }
 }
 .footer-contacts {
+  display: flex;
+  flex-direction: column;
   @media screen and(min-width:1200px) {
-    display: flex;
-    flex-direction: column;
     margin-right: 70px;
   }
 }
 .footer-social {
-  @media screen and(min-width:1200px) {
-    display: flex;
-    flex-direction: column;
-  }
+  display: flex;
+  flex-direction: column;
 }
 .social-title,
 .sign-title {
@@ -76,8 +78,9 @@ footer {
   &:focus {
     background-color: getColor('accent-color');
   }
-
-  margin-bottom: 60px;
+  @media screen and(min-width:1200px) {
+    margin-bottom: 60px;
+  }
 }
 
 .footer-sign {

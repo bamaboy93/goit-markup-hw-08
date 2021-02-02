@@ -1,12 +1,20 @@
 .crew {
-  padding-top: 94px;
-  padding-bottom: 94px;
   background-color: getColor('crew-bg-color');
 
   padding-top: 60px;
   padding-bottom: 60px;
+
+  @media screen and(min-width:1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .crew-list {
+  @media screen and(min-width:768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
   @media screen and (min-width: 1200px) {
     display: flex;
     justify-content: space-between;
@@ -39,10 +47,15 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+
+  @media screen and(min-width:768px) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
 }
-.crew-list .item:not(:last-child) {
-  margin-bottom: 30px;
-}
+// .crew-list .item:not(:last-child) {
+//   margin-bottom: 30px;
+// }
 
 .crew-list .item-container {
   padding-top: 30px;
