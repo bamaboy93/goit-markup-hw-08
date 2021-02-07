@@ -1,9 +1,7 @@
-footer {
+.footer {
   background-color: getColor('secondary-bg-color');
   padding-top: 60px;
   padding-bottom: 60px;
-
-  text-align: center;
 }
 /* Address */
 .address {
@@ -30,26 +28,28 @@ footer {
   margin-bottom: 60px;
 }
 .block-tablet {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-around;
+  @media screen and(min-width:768px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+  }
 }
 .block {
+  @media (max-width: 1199px) {
+    text-align: center;
+  }
   @media screen and(min-width:1200px) {
     display: flex;
     align-items: baseline;
   }
 }
 .footer-contacts {
-  display: flex;
-  flex-direction: column;
   @media screen and(min-width:1200px) {
     margin-right: 70px;
   }
 }
 .footer-social {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 60px;
 }
 .social-title,
 .sign-title {
@@ -84,8 +84,9 @@ footer {
 }
 
 .footer-sign {
-  display: inline-block;
-  margin-left: auto;
+  @media screen and(min-width:1200px) {
+    margin-left: auto;
+  }
 }
 .signs {
   @media screen and(min-width:1200px) {
@@ -105,6 +106,10 @@ footer {
   letter-spacing: 0.03em;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-bottom: 0;
+  }
 
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;

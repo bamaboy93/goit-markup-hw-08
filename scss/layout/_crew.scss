@@ -33,7 +33,14 @@
 .crew-list .img {
   display: block;
 
-  width: 100%;
+  @media screen and (min-width: 768px) {
+    max-width: 100%;
+    height: 374px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 100%;
+    height: 260px;
+  }
 }
 .crew-list .description {
   margin-top: 0;
@@ -52,10 +59,16 @@
     width: calc((100% - 4 * 15px) / 2);
     margin: 15px;
   }
+  @media screen and(min-width:1200px) {
+    width: calc((100% - 8 * 15px) / 4);
+    margin: 15px;
+  }
 }
-// .crew-list .item:not(:last-child) {
-//   margin-bottom: 30px;
-// }
+.crew-list .item:not(:last-child) {
+  @media screen and(max-width:767px) {
+    margin-bottom: 30px;
+  }
+}
 
 .crew-list .item-container {
   padding-top: 30px;
