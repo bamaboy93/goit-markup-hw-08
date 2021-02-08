@@ -33,13 +33,12 @@
 .crew-list .img {
   display: block;
 
+  max-width: 100%;
+  height: auto;
+
   @media screen and (min-width: 768px) {
     max-width: 100%;
-    height: 374px;
-  }
-  @media screen and (min-width: 1200px) {
-    max-width: 100%;
-    height: 260px;
+    height: auto;
   }
 }
 .crew-list .description {
