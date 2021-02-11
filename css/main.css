@@ -1242,8 +1242,13 @@ a {
   margin-bottom: 9px;
 }
 
-.auth {
-  margin-bottom: 60px;
+@media screen and (max-width: 1199px) {
+  .auth {
+    margin-bottom: 60px;
+  }
+  .footer-social {
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1280,10 +1285,6 @@ a {
   .footer-contacts {
     margin-right: 70px;
   }
-}
-
-.footer-social {
-  margin-bottom: 60px;
 }
 
 .social-title,

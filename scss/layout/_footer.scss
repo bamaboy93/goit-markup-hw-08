@@ -24,8 +24,14 @@
 .auth .item:not(:last-child) {
   margin-bottom: 9px;
 }
-.auth {
-  margin-bottom: 60px;
+
+@media screen and(max-width:1199px) {
+  .auth {
+    margin-bottom: 60px;
+  }
+  .footer-social {
+    margin-bottom: 60px;
+  }
 }
 .block-tablet {
   @media screen and(min-width:768px) {
@@ -48,9 +54,7 @@
     margin-right: 70px;
   }
 }
-.footer-social {
-  margin-bottom: 60px;
-}
+
 .social-title,
 .sign-title {
   color: getColor('white-bg-color');
