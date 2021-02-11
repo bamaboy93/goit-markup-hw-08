@@ -1090,9 +1090,6 @@ header {
 
 @media screen and (min-width: 1200px) {
   .crew-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -1113,13 +1110,6 @@ header {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-@media screen and (min-width: 768px) {
-  .crew-list .img {
-    max-width: 100%;
-    height: auto;
-  }
 }
 
 .crew-list .description {
@@ -1214,14 +1204,6 @@ header {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: -15px;
-}
-
-@media screen and (min-width: 1200px) {
-  .clients {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 
 .clients-item {
@@ -1481,22 +1463,9 @@ header {
   letter-spacing: 0.06em;
 }
 
-@media screen and (max-width: 767px) {
-  .portfolio-items .img {
-    max-width: 100%;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .portfolio-items .img {
-    max-width: 354px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .portfolio-items .img {
-    max-width: 370px;
-  }
+.portfolio-items .img {
+  max-width: 100%;
+  height: auto;
 }
 
 .portfolio-items .description {
