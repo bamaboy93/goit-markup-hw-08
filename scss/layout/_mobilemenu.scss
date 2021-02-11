@@ -40,6 +40,9 @@
     color: getColor('accent-color');
   }
 }
+.menu-nav-link.current {
+  color: getColor('accent-color');
+}
 .menu-nav .item:not(:last-child),
 .menu-contacts .item:not(:last-child) {
   margin-bottom: 32px;

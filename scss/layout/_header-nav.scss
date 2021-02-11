@@ -1,6 +1,8 @@
+header {
+  border-bottom: 1px solid #ececec;
+}
 .header {
   background-color: getColor('white-bg-color');
-  border-bottom: 1px solid #ececec;
 
   position: relative;
   @media screen and (min-width: 768px) {
@@ -60,14 +62,16 @@
     position: relative;
   }
   .site-nav-link.current::after {
-    position: absolute;
-    bottom: -1px;
-    border-radius: 2px;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: getColor('accent-color');
+    @media screen and(min-width:768px) {
+      position: absolute;
+      bottom: -1px;
+      border-radius: 2px;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: getColor('accent-color');
+    }
   }
 }
 
