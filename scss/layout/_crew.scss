@@ -34,6 +34,10 @@
 
   max-width: 100%;
   height: auto;
+  @media screen and (min-width: 768px) {
+    max-width: 100%;
+    height: auto;
+  }
 }
 .crew-list .description {
   margin-top: 0;
