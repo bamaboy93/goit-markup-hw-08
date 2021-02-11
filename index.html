@@ -10,23 +10,63 @@
     <link rel="stylesheet" href="./css/main.min.css">
     
 </head>
-<body>
+<body modal-open>
     <!--Шапка-->
     <header>
         <div class="header container">
-            <nav class="main-nav">
+            
+            <nav class="nav">
                 <a href="./index.html" class="logo">
                     Web<span class="blacklogo">Studio</span> 
                 </a>
-                
-                
-               
+                <button type="button" class="menu-button" data-menu-button>
+                    <svg class="menu-button-icon" 
+                    width="40" 
+                    height="40"
+                    aria-label="Переключатель мобильного меню"
+                    aria-controls="menu-container">
+                        <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+                        <use class="icon-close" href="./images/sprite.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <div class="menu-container" id="menu-container" data-menu>
+                    <ul class="menu-nav list">
+                        <li class="item current"><a href="./index.html" class="menu-nav-link current">Студия</a></li>
+                        <li class="item"><a href="./portfolio.html" class="menu-nav-link">Портфолио</a></li>
+                        <li class="item"><a href="/" class="menu-nav-link">Контакты</a></li>
+                    </ul>
+                    <ul class="menu-contacts list">
+                        <li class="item"><a class="menu-contacts-tel" href="tel:+380961111111">
+                            +38 096 111 11 11</a>
+                        </li>
+                        <li class="item"><a class="menu-contacts-mail" href="mailto:info@devstudio.com">
+                            info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class="menu-social list">
+                        <li class="item">
+                            <a class="menu-social-link" href="">Instagram</a>
+                        </li>
+                        <li class="item">
+                            <a class="menu-social-link" href="">Twitter</a>
+                        </li>
+                        <li class="item">
+                            <a class="menu-social-link" href="">Facebook</a>
+                        </li>
+                        <li class="item">
+                            <a class="menu-social-link" href="">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <div class="main-nav">   
                 <ul class="site-nav list">
                     <li class="item current"><a href="./index.html" class="site-nav-link current">Студия</a></li>
                     <li class="item"><a href="./portfolio.html" class="site-nav-link">Портфолио</a></li>
                     <li class="item"><a href="/" class="site-nav-link">Контакты</a></li>
                 </ul>
-            </nav>
+            </div>
            
             <ul class="auth-nav list">
                 <li class="item"><a class="auth-nav-link" href="mailto:info@devstudio.com">
@@ -51,7 +91,7 @@
             <div class="container">
                 <div class="hero-section container">
                     <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                    <button  type="button" class="button primary" data-open-modal>Заказать услугу</button>
+                    <button  type="button" class="button primary" data-modal-open>Заказать услугу</button>
                 </div>
             </div>
         </section>
@@ -133,10 +173,13 @@
                 <h2 class="section-title">Наша команда</h2>
                 <ul class="crew-list list">
                     <li class="item">
-                        <img class="img" srcset="./images/ProductDesigner.jpg 1x, ./images/ProductDesigner2x.jpg 2x" 
-                        src="./images/ProductDesigner.jpg" 
-                        alt="Фото Игоря Демьяненко" 
-                        >
+                        <picture>
+                            <source srcset="./images/mobile/ProductDesigner2x.jpg 2x" media="(min-width: 480px)">
+                            <source srcset="./images/desktop/ProductDesigner.jpg 1x, ./images/desktop/ProductDesigner2x.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/tablet/ProductDesigner.jpg 1x, ./images/tablet/ProductDesigner2x.jpg 2x" media="(min-width: 768px)">
+                            <img class="img" src="./images/mobile/ProductDesigner.jpg" alt="Фото Игоря Демьяненко" >
+                        </picture>
+                        
                         <div class="item-container">
                             <h3 class="title">Игорь Демьяненко</h3>
                             <p class="description">Product Designer</p>
@@ -173,10 +216,16 @@
                         </div>
                     </li>
                     <li class="item">
-                        <img class="img" srcset="./images/FrontendDeveloper.jpg 1x, ./images/FrontendDeveloper2x.jpg 2x" 
-                        src="./images/FrontendDeveloper.jpg" 
-                        alt="Фото Ольги Репиной" 
-                        width="450">
+                        <picture>
+                            <source srcset="./images/mobile/FrontendDeveloper2x.jpg 2x" media="(min-width: 480px)">
+                            <source srcset="./images/desktop/FrontendDeveloper.jpg 1x, ./images/desktop/FrontendDeveloper2x.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/tablet/FrontendDeveloper.jpg 1x, ./images/tablet/FrontendDeveloper2x.jpg 2x" media="(min-width: 768px)">
+                            <img class="img"  src="./images/mobile/FrontendDeveloper.jpg" alt="Фото Ольги Репиной">
+                        </picture>
+                        
+                        
+                         
+                        
                         <div class="item-container">
                             <h3 class="title">Ольга Репина</h3>
                             <p class="description">Frontend Developer</p>
@@ -213,10 +262,16 @@
                         </div>
                     </li>
                     <li class="item">
-                        <img class="img" srcset="./images/Marketing.jpg 1x, ./images/Marketing2x.jpg 2x" 
-                        src="./images/Marketing.jpg" 
-                        alt="Фото Николая Тарасова" 
-                        width="450">
+                        <picture>
+                            <source srcset="./images/mobile/Marketing2x.jpg 2x" media="(min-width: 480px)">
+                            <source srcset="./images/desktop/Marketing.jpg 1x, ./images/desktop/Marketing2x.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/tablet/Marketing.jpg 1x, ./images/tablet/Marketing2x.jpg 2x" media="(min-width: 768px)">
+                            <img class="img" src="./images/mobile/Marketing.jpg" alt="Фото Николая Тарасова">
+                        </picture>
+                        
+                         
+                         
+                        
                         <div class="item-container">
                             <h3 class="title">Николай Тарасов</h3>
                             <p class="description">Marketing</p>
@@ -253,10 +308,16 @@
                         </div>
                     </li>
                     <li class="item">
-                        <img class="img" srcset="./images/UIDesigner.jpg 1x, ./images/UIDesigner2x.jpg 2x" 
-                        src="./images/UIDesigner.jpg" 
-                        alt="Фото Михаила Ермакова" 
-                        width="450">
+                        <picture>
+                            <source srcset="./images/mobile/UIDesigner2x.jpg 2x" media="(min-width: 480px)">
+                            <source srcset="./images/desktop/UIDesigner.jpg 1x, ./images/desktop/UIDesigner2x.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/tablet/UIDesigner.jpg 1x, ./images/tablet/UIDesigner2x.jpg 2x" media="(min-width: 768px)">
+                            <img class="img" src="./images/mobile/UIDesigner.jpg" alt="Фото Михаила Ермакова">
+                        </picture>
+                        
+                         
+                         
+                        
                         <div class="item-container">
                             <h3 class="title">Михаил Ермаков</h3>
                             <p class="description">UI Designer</p>
@@ -415,9 +476,9 @@
             </div>
         </div>
     </footer>
-    <div class="backdrop is-hidden" data-backdrop>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button class="modal-button" data-close-modal>&#10006;</button>
+            <button class="modal-button" data-modal-close>&#10006;</button>
             <div class="modal-form">
                 <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
                 <form class="js-speaker-form">
@@ -486,28 +547,8 @@
                 });
         })  ();
     </script>
-    <script>
-        const refs = {
-            openModalBtn: document.querySelector("[data-open-modal]"),
-            closeModalBtn: document.querySelector("[data-close-modal]"),
-            backdrop: document.querySelector("[data-backdrop]"),
-        };
-
-        refs.openModalBtn.addEventListener("click", toggleModal);
-        refs.closeModalBtn.addEventListener("click", toggleModal);
-
-        refs.backdrop.addEventListener("click", logBackdropClick);
-
-        function toggleModal() {
-            refs.backdrop.classList.toggle("is-hidden");
-        }
-
-        function logBackdropClick(){
-            console.log
-        }
-    </script>
     
-      
+    <script src="js/modal.js"></script> 
     <script src="./js/menu.js"></script>
 </body>
 </html>

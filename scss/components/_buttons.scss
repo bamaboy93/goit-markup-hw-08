@@ -65,14 +65,21 @@
   }
 }
 .menu-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 7px;
-  padding: 8px 12px;
+  display: inline-flex;
 
+  padding: 0;
+  margin: 0;
   border: none;
   background-color: transparent;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: getColor('accent-color');
+  }
 
   @media screen and(min-width:768px) {
     display: none;
@@ -85,6 +92,12 @@
   &.icon-menu {
     display: none;
   }
+}
+.menu-button-icon {
+  fill: currentColor;
+}
+.menu-button .icon-close {
+  display: none;
 }
 .menu-button.is-open .icon-close {
   display: block;
