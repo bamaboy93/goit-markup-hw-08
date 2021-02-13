@@ -1510,10 +1510,9 @@ header {
   line-height: 1.56;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
   .overlay .card-description {
-    font-size: 16px;
-    line-height: 1.46;
+    font-size: calc(16px + (2 + 2 * 0.7) * ((100vw - 320px) / 480));
     padding: 24px 24px;
   }
 }
